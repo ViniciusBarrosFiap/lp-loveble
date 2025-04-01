@@ -15,18 +15,18 @@ const Index = () => {
 
   const handleWatchVideo = () => {
     setShowVideo(true);
-    // Notify user that they need to watch the video
-    toast.info('Please watch the video to access special offer');
+    // Notifica o usuário que eles precisam assistir ao vídeo
+    toast.info('Por favor, assista ao vídeo para acessar o produto exclusivo');
   };
 
   const handleVideoComplete = () => {
     setShowVideo(false);
     setHasWatchedVideo(true);
     
-    // Scroll to checkout section after a short delay
+    // Rola para a seção de checkout após um pequeno atraso
     setTimeout(() => {
       checkoutRef.current?.scrollIntoView({ behavior: 'smooth' });
-      toast.success('Special offer unlocked!');
+      toast.success('Produto exclusivo desbloqueado! Aproveite a oferta por tempo limitado.');
     }, 300);
   };
 
